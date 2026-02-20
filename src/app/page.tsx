@@ -27,7 +27,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
               {[
                 { 
                   title: "Estrategia Digital", 
@@ -63,6 +63,48 @@ export default function Home() {
                   </Link>
                 </div>
               ))}
+            </div>
+
+            {/* Sub-services / Stack */}
+            <div className="p-12 rounded-[3rem] bg-zinc-950 text-white overflow-hidden relative group">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px] -z-10 group-hover:scale-150 transition-transform duration-1000" />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                  <h3 className="text-3xl font-black mb-6">Nuestra caja de herramientas</h3>
+                  <p className="text-zinc-400 text-lg font-light mb-8">
+                    No nos casamos con ninguna herramienta, pero dominamos las mejores del mercado para construir sistemas escalables.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    {["Meta Ads", "Google Ads", "LinkedIn Ads", "HubSpot", "Salesforce", "Make.com", "Next.js", "PostgreSQL"].map(tech => (
+                      <span key={tech} className="px-5 py-2 rounded-full bg-zinc-900 border border-zinc-800 text-sm font-bold text-zinc-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 text-center">
+                      <div className="text-3xl font-black text-blue-500 mb-1">98%</div>
+                      <div className="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Retención clientes</div>
+                    </div>
+                    <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 text-center">
+                      <div className="text-3xl font-black text-blue-500 mb-1">+2M€</div>
+                      <div className="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Ad Spend Gestionado</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4 pt-8">
+                    <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 text-center">
+                      <div className="text-3xl font-black text-blue-500 mb-1">x3.2</div>
+                      <div className="text-[10px] uppercase font-bold tracking-widest text-zinc-500">ROI Promedio</div>
+                    </div>
+                    <div className="p-8 rounded-3xl bg-zinc-900 border border-zinc-800 text-center">
+                      <div className="text-3xl font-black text-blue-500 mb-1">24/7</div>
+                      <div className="text-[10px] uppercase font-bold tracking-widest text-zinc-500">Monitorización</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
