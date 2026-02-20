@@ -6,6 +6,7 @@ import { ROICalculator } from "@/components/sections/ROICalculator";
 import { TrustSection } from "@/components/sections/TrustSection";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { Proceso } from "@/components/sections/Proceso";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustSection />
+        <Proceso />
 
         {/* Services Section */}
         <section id="services" className="py-32 bg-zinc-50 dark:bg-zinc-900/20 relative overflow-hidden">
