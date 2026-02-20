@@ -23,6 +23,9 @@ export const Header = () => {
           <Link href="#about" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Metodología
           </Link>
+          <Link href="#team" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+            Equipo
+          </Link>
           <Link href="#testimonials" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Casos
           </Link>
@@ -74,6 +77,13 @@ export const Header = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Metodología
+          </Link>
+          <Link 
+            href="#team" 
+            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Equipo
           </Link>
           <Link 
             href="#testimonials" 

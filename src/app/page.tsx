@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
@@ -16,7 +15,7 @@ export default function Home() {
         <section id="services" className="py-32 bg-zinc-50 dark:bg-zinc-900/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 blur-[100px] -z-10" />
           <div className="container px-6 mx-auto">
-            <div className="max-w-3xl mb-20">
+            <div className="max-w-3xl mb-20 animate-fade-in-up">
               <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 Servicios
               </div>
@@ -34,22 +33,24 @@ export default function Home() {
                   title: "Estrategia Digital", 
                   desc: "Diagnosticamos tu embudo de ventas y definimos un plan de acción con KPIs claros. Sabrás exactamente dónde estás perdiendo dinero y cómo arreglarlo.",
                   icon: "🎯",
-                  color: "blue"
+                  delay: "0s"
                 },
                 { 
                   title: "Marketing y Ads", 
                   desc: "Gestión de campañas en Meta, Google y LinkedIn Ads orientadas a ROI real. Menos métricas de vanidad y más clientes cualificados en tu CRM.",
                   icon: "📈",
-                  color: "indigo"
+                  delay: "0.1s"
                 },
                 { 
                   title: "Sistemas de Conversión", 
                   desc: "Landing pages de alto rendimiento y automatizaciones que liberan tiempo de tu equipo. Tecnología robusta puesta al servicio del negocio.",
                   icon: "⚙️",
-                  color: "purple"
+                  delay: "0.2s"
                 }
               ].map((service) => (
-                <div key={service.title} className="group p-10 rounded-[2.5rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+                <div key={service.title} 
+                     style={{ animationDelay: service.delay }}
+                     className="group p-10 rounded-[2.5rem] bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-blue-500 dark:hover:border-blue-500 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 animate-fade-in-up fill-mode-both">
                   <div className="w-16 h-16 rounded-2xl bg-zinc-50 dark:bg-zinc-800 flex items-center justify-center text-4xl mb-8 group-hover:scale-110 transition-transform duration-500 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20">
                     {service.icon}
                   </div>
@@ -70,7 +71,7 @@ export default function Home() {
         <section id="about" className="py-32">
           <div className="container px-6 mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-              <div>
+              <div className="animate-fade-in-left">
                 <div className="inline-block px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                   Metodología
                 </div>
@@ -94,7 +95,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative animate-fade-in-right">
                 <div className="aspect-[4/5] rounded-[3rem] bg-zinc-100 dark:bg-zinc-900 overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-inner group">
                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                    <div className="absolute inset-0 flex flex-col items-center justify-center p-16 text-center">
@@ -103,7 +104,7 @@ export default function Home() {
                      <p className="text-zinc-500 dark:text-zinc-400">Diseñamos la infraestructura que tu negocio necesita para crecer sin romperse.</p>
                    </div>
                 </div>
-                <div className="absolute -bottom-10 -left-10 p-10 bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 rounded-[2rem] shadow-2xl hidden md:block border border-zinc-800 dark:border-zinc-100 animate-fade-in">
+                <div className="absolute -bottom-10 -left-10 p-10 bg-zinc-900 dark:bg-white text-white dark:text-zinc-950 rounded-[2rem] shadow-2xl hidden md:block border border-zinc-800 dark:border-zinc-100">
                   <div className="text-5xl font-black mb-1">Cero</div>
                   <div className="text-xs font-bold uppercase tracking-[0.2em] opacity-60">Humo garantizado</div>
                 </div>
@@ -112,7 +113,41 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials - Infinite Scroll vibe but static */}
+        {/* Team Section - NEW */}
+        <section id="team" className="py-32 bg-zinc-50 dark:bg-zinc-900/10">
+          <div className="container px-6 mx-auto">
+            <div className="text-center max-w-2xl mx-auto mb-20 animate-fade-in">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
+                Equipo
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 text-zinc-900 dark:text-zinc-100">Expertos en <span className="text-blue-600">ejecución.</span></h2>
+              <p className="text-xl text-zinc-600 dark:text-zinc-400 font-light">
+                No somos una agencia de 50 becarios. Somos un equipo senior que se ensucia las manos con tu proyecto.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {[
+                { name: "Diego Vallejo", role: "Estrategia & Growth", initials: "DV" },
+                { name: "Daniela Martínez", role: "Operaciones & CRM", initials: "DM" },
+                { name: "Marcos Sanz", role: "Performance Marketing", initials: "MS" }
+              ].map((member, i) => (
+                <div key={i} className="group text-center">
+                  <div className="relative w-48 h-48 mx-auto mb-8">
+                    <div className="absolute inset-0 bg-blue-600 rounded-full scale-105 opacity-0 group-hover:opacity-20 transition-all duration-500" />
+                    <div className="w-full h-full rounded-full bg-zinc-200 dark:bg-zinc-800 flex items-center justify-center text-4xl font-black text-zinc-400 dark:text-zinc-600 border-2 border-transparent group-hover:border-blue-600 transition-all duration-500 overflow-hidden">
+                      {member.initials}
+                    </div>
+                  </div>
+                  <h4 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-1">{member.name}</h4>
+                  <p className="text-blue-600 dark:text-blue-400 font-bold uppercase tracking-widest text-xs">{member.role}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
         <section id="testimonials" className="py-32 bg-zinc-950 text-white relative overflow-hidden">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/5 blur-[120px]" />
           <div className="container px-6 mx-auto relative z-10">
@@ -141,11 +176,11 @@ export default function Home() {
                    role: "Marketing Manager, Aris"
                  }
                ].map((t, i) => (
-                 <div key={i} className="p-10 rounded-[2.5rem] bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-zinc-700 transition-all duration-300">
+                 <div key={i} className="p-10 rounded-[2.5rem] bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 hover:border-zinc-700 transition-all duration-300 group">
                     <div className="flex gap-1 mb-8">
-                      {[1,2,3,4,5].map(star => <span key={star} className="text-blue-500 text-sm">★</span>)}
+                      {[1,2,3,4,5].map(star => <span key={star} className="text-blue-500 text-sm group-hover:scale-125 transition-transform duration-300" style={{ transitionDelay: `${star * 50}ms` }}>★</span>)}
                     </div>
-                    <p className="text-xl text-zinc-300 mb-10 leading-relaxed font-light">"{t.quote}"</p>
+                    <p className="text-xl text-zinc-300 mb-10 leading-relaxed font-light italic">"{t.quote}"</p>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 rounded-full bg-zinc-800 flex items-center justify-center font-bold text-blue-500 border border-zinc-700">
                         {t.author[0]}
@@ -164,7 +199,7 @@ export default function Home() {
         {/* FAQ Section */}
         <section id="faq" className="py-32 border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950">
           <div className="container px-6 mx-auto max-w-4xl">
-            <div className="text-center mb-20">
+            <div className="text-center mb-20 animate-fade-in">
               <div className="inline-block px-4 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-bold uppercase tracking-[0.2em] mb-6">
                 FAQ
               </div>
@@ -188,9 +223,9 @@ export default function Home() {
         {/* CTA Final */}
         <section id="contact" className="py-32">
           <div className="container px-6 mx-auto">
-            <div className="bg-blue-600 rounded-[4rem] p-12 md:p-32 text-center text-white relative overflow-hidden shadow-3xl shadow-blue-500/20">
-              <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-32 -mt-32 blur-[100px]" />
-              <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-900/20 rounded-full -ml-32 -mb-32 blur-[100px]" />
+            <div className="bg-blue-600 rounded-[4rem] p-12 md:p-32 text-center text-white relative overflow-hidden shadow-3xl shadow-blue-500/20 group">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-32 -mt-32 blur-[100px] group-hover:scale-110 transition-transform duration-1000" />
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-900/20 rounded-full -ml-32 -mb-32 blur-[100px] group-hover:scale-110 transition-transform duration-1000" />
               
               <div className="relative z-10 max-w-4xl mx-auto">
                 <h2 className="text-5xl md:text-8xl font-black mb-10 tracking-tighter">¿Ponemos orden?</h2>
@@ -226,6 +261,7 @@ export default function Home() {
                 <span className="font-bold uppercase tracking-widest text-xs text-zinc-400">Navegación</span>
                 <Link href="#services" className="hover:text-blue-600 transition-colors">Servicios</Link>
                 <Link href="#about" className="hover:text-blue-600 transition-colors">Metodología</Link>
+                <Link href="#team" className="hover:text-blue-600 transition-colors">Equipo</Link>
                 <Link href="#testimonials" className="hover:text-blue-600 transition-colors">Casos</Link>
               </div>
               <div className="flex flex-col gap-4">
