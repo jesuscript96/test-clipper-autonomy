@@ -1,65 +1,182 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="flex min-h-screen flex-col bg-gradient-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-950 dark:via-black dark:to-zinc-900 min-h-screen transition-colors duration-300">
+      {/* Header */}
+      <header className="absolute top-0 inset-x-0 px-6 py-4 flex flex-col sm:flex-row justify-between items-center backdrop-blur-sm bg-white/70 dark:bg-black/70 border-b border-zinc-200/50 dark:border-zinc-800/50">
+        <Link href="#" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+          Clipper Labs
+        </Link>
+        <nav className="hidden sm:hidden sm:flex gap-6">
+          <Link href="#services" className="text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            Servicios
+          </Link>
+          <Link href="#about" className="text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            Sobre Nosotros
+          </Link>
+          <Link href="#testimonials" className="text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            Testimonios
+          </Link>
+          <Link href="#contact" className="text-zinc-700 dark:text-zinc-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">
+            Contacto
+          </Link>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <main className="flex-1 flex flex-col items-center justify-between px-6 py-32">
+        <div className="text-center w-full max-w-4xl animate-fade-in-up">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 mb-6 leading-tight tracking-tight">
+            Eleva tu negocio al siguiente nivel
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xl sm:text-2xl text-zinc-600 dark:text-zinc-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Somos expertos en crear experiencias digitales que convierten. Desde diseño web hasta estrategias de crecimiento, transformamos tus visitantes en clientes leales.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
+            <Button href="#contact" size="lg" className="h-12 px-8 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <span className="font-semibold">Comenzar proyecto</span>
+            </Button>
+            <Button href="#services" variant="outline" size="lg" className="h-12 px-8 text-lg border-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300">
+              <span className="font-semibold">Ver servicios</span>
+            </Button>
+          </div>
+
+          <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">150+</div>
+              <div className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">Proyectos completados</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">98%</div>
+              <div className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">Clientes satisfechos</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-pink-600 dark:text-pink-400">5★</div>
+              <div className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">Valoración media</div>
+            </div>
+          </div>
         </div>
       </main>
+
+      {/* About Section */}
+      <section id="about" className="relative relative-x-auto px-6 py-20 w-full max-w-6xl">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-zinc-800 dark:text-zinc-100 mb-4">¿Por qué elegirnos?</h2>
+          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            No vendemos humo. Entregamos resultados medibles con un enfoque basado en datos y años de experiencia.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-600 dark:text-blue-400">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">Rapidez</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Entregamos proyectos en tiempo récord sin sacrificar calidad. Tu ventaja competitiva no puede esperar.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-600 dark:text-purple-400">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">Calidad garantizada</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Cada línea de código, cada diseño, cada estrategia está optimizada para resultados.</p>
+              </div>
+            </div>
+
+            <div className="flex gap-4 items-start">
+              <div className="flex-shrink-0 w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-lg flex items-center justify-center text-pink-600 dark:text-pink-400">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">Atención personalizada</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">Cada cliente es único. trabajamos uno a uno para entender tus necesidades específicas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-100 dark:bg-zinc-800/50 p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-bold text-zinc-800 dark:text-zinc-100 mb-6">Nuestro proceso</h3>
+            <ol className="space-y-6 relative">
+              <div className="absolute left-4 top-2 bottom-2 w-0.5 bg-gradient-to-b from-blue-500 to-purple-500"></div>
+              {[
+                { step: 1, text: "Investigamos tu mercado, competencia y audiencia objetivo" },
+                { step: 2, text: "Diseñamos una estrategia personalizada para tu negocio" },
+                { step: 3, text: "Crear una experiencia de usuario que convierte" },
+                { step: 4, text: "Implementamos con las mejores tecnologías" },
+                { step: 5, text: "Medimos, analizamos y mejoramos continuamente" }
+              ].map((item) => (
+                <li key={item.step} className="flex items-start gap-4 relative">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white text-sm font-bold z-10">
+                    {item.step}
+                  </div>
+                  <p className="text-zinc-700 dark:text-zinc-300 pt-1">{item.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="relative relative-x-auto px-6 py-16 w-full max-w-3xl">
+        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200 mb-12">Nuestros Servicios</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {["Web Design", "Conversion Optimization", "Analytics & Strategy"].map((service) => (
+            <div key={service} className="border rounded-lg p-6 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{service}</h3>
+              <p className="text-zinc-600 dark:text-zinc-400 mt-2">
+                Mejoramos tu sitio para captar clientes, reducir fricción y aumentar conversiones.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section id="testimonials" className="relative relative-x-auto px-6 py-16 w-full max-w-3xl">
+        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200 mb-12">Lo que dicen nuestros clientes</h2>
+        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <blockquote className="text-center max-w-md text-lg text-zinc-600 dark:text-zinc-400">
+            "Working with Clipper Labs transformed our digital presence. Conversions up 45% in 3 months!"
+          </blockquote>
+          <blockquote className="text-center max-w-md text-lg text-zinc-600 dark:text-zinc-400">
+            "Their attention to detail and data‑driven approach made all the difference."
+          </blockquote>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="relative relative-x-auto px-6 py-16 w-full max-w-3xl">
+        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200 mb-8">
+          ¡Conectemos!
+        </h2>
+        <div className="flex flex-col sm:flex-row justify-between gap-8">
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
+            ¿Listo para impulsar tu negocio? Escríbenos y analicemos juntos cómo mejorar tu presencia digital.
+          </p>
+          <div className="self-center whitespace-nowrap">
+            <Button href="mailto:info@clipperlabs.dev" variant="default" size="lg" className="flex justify-center items-center gap-2">
+              <span className="font-medium">info@clipperlabs.dev</span>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="relative bottom-0 w-full bg-zinc-900 text-white py-6px text-sm text-center">
+        © {new Date().getFullYear()} Clipper Labs. All rights reserved.
+      </footer>
     </div>
   );
 }
