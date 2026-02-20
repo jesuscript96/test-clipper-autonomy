@@ -2,11 +2,15 @@ import Link from "next/link";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Button } from "@/components/ui/button";
+import { ROICalculator } from "@/components/sections/ROICalculator";
+import { ContactForm } from "@/components/sections/ContactForm";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 selection:bg-blue-100 dark:selection:bg-blue-900/30 transition-colors duration-300 scroll-smooth">
       <Header />
+      <WhatsAppButton />
       
       <main>
         <Hero />
@@ -237,6 +241,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <ROICalculator />
+        <ContactForm />
 
         {/* FAQ Section */}
         <section id="faq" className="py-32 border-t border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950">

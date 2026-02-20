@@ -27,7 +27,10 @@ export const Header = () => {
             Equipo
           </Link>
           <Link href="#testimonials" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
-            Casos
+            Testimonios
+          </Link>
+          <Link href="/casos" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+            Casos de Éxito
           </Link>
           <Link href="#faq" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             FAQ
@@ -90,7 +93,14 @@ export const Header = () => {
             className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
             onClick={() => setIsMenuOpen(false)}
           >
-            Casos
+            Testimonios
+          </Link>
+          <Link 
+            href="/casos" 
+            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Casos de Éxito
           </Link>
           <Link 
             href="#faq" 
