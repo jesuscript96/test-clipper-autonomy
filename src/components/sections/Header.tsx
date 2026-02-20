@@ -20,20 +20,17 @@ export const Header = () => {
           <Link href="#services" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Servicios
           </Link>
+          <Link href="/recursos" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+            Recursos
+          </Link>
+          <Link href="/casos" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+            Casos
+          </Link>
           <Link href="#about" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Metodología
           </Link>
-          <Link href="#team" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
-            Equipo
-          </Link>
           <Link href="#testimonials" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Testimonios
-          </Link>
-          <Link href="/casos" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
-            Casos de Éxito
-          </Link>
-          <Link href="#faq" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
-            FAQ
           </Link>
         </nav>
 
@@ -75,6 +72,20 @@ export const Header = () => {
             Servicios
           </Link>
           <Link 
+            href="/recursos" 
+            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Recursos
+          </Link>
+          <Link 
+            href="/casos" 
+            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Casos
+          </Link>
+          <Link 
             href="#about" 
             className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
             onClick={() => setIsMenuOpen(false)}
@@ -82,32 +93,11 @@ export const Header = () => {
             Metodología
           </Link>
           <Link 
-            href="#team" 
-            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Equipo
-          </Link>
-          <Link 
             href="#testimonials" 
             className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
             onClick={() => setIsMenuOpen(false)}
           >
             Testimonios
-          </Link>
-          <Link 
-            href="/casos" 
-            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Casos de Éxito
-          </Link>
-          <Link 
-            href="#faq" 
-            className="text-lg font-medium text-zinc-600 dark:text-zinc-400 py-2 border-b border-zinc-100 dark:border-zinc-900"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            FAQ
           </Link>
           <Link 
             href="https://calendly.com/dvallejo-varullo/ponemos-orden" 
