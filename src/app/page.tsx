@@ -38,11 +38,15 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-            <Button href="https://calendly.com/dvallejo-varullo/ponemos-orden" target="_blank" rel="noopener noreferrer" size="lg" className="h-12 px-8 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              <span className="font-semibold">Agendar llamada</span>
+            <Button asChild size="lg" className="h-12 px-8 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Link href="https://calendly.com/dvallejo-varullo/ponemos-orden" target="_blank" rel="noopener noreferrer">
+                <span className="font-semibold">Agendar llamada</span>
+              </Link>
             </Button>
-            <Button href="#services" variant="outline" size="lg" className="h-12 px-8 text-lg border-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300">
-              <span className="font-semibold">Ver servicios</span>
+            <Button asChild variant="outline" size="lg" className="h-12 px-8 text-lg border-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300">
+              <Link href="#services">
+                <span className="font-semibold">Ver servicios</span>
+              </Link>
             </Button>
           </div>
 
@@ -203,8 +207,10 @@ export default function Home() {
             ¿Cansado del caos digital? Agenda una llamada gratuita y te contamos cómo podemos ayudarte.
           </p>
           <div className="self-center whitespace-nowrap">
-            <Button href="https://calendly.com/dvallejo-varullo/ponemos-orden" target="_blank" rel="noopener noreferrer" size="lg" className="flex justify-center items-center gap-2">
-              <span className="font-medium">Agendar llamada</span>
+            <Button asChild size="lg" className="flex justify-center items-center gap-2">
+              <Link href="https://calendly.com/dvallejo-varullo/ponemos-orden" target="_blank" rel="noopener noreferrer">
+                <span className="font-medium">Agendar llamada</span>
+              </Link>
             </Button>
           </div>
         </div>
