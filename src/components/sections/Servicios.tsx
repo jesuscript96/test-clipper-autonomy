@@ -41,7 +41,7 @@ const estats = [
 
 export function Servicios() {
   return (
-    <section id="services" className="py-32 bg-zinc-50 dark:bg-zinc-900/20 relative overflow-hidden">
+    <section id="services" className="py-32 bg-zinc-50 dark:bg-zinc-900/20 relative overflow-hidden scroll-mt-24">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 blur-[100px] -z-10" />
       <div className="container px-6 mx-auto">
         <div className="max-w-3xl mb-20 animate-fade-in-up">

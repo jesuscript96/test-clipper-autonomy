@@ -19,12 +19,27 @@ const testimonios: Testimonio[] = [
     quote: "Lo que más valoro es la claridad. Ahora sé exactamente dónde va cada euro de mi presupuesto de marketing. El ROI se ha disparado.",
     author: "Elena P.",
     role: "Marketing Manager, Aris"
+  },
+  {
+    quote: "No son solo otra agencia más. Son el equipo que realmente entiende nuestro negocio y nos ayuda a crecer de forma sostenible.",
+    author: "Carlos S.",
+    role: "COO, InnovaTech"
+  },
+  {
+    quote: "La transparencia con la que trabajan es refrescante. Cada euro invertido está justificado y los resultados son medibles.",
+    author: "Laura M.",
+    role: "CMO, BioHealth"
+  },
+  {
+    quote: "Pasamos de sentirnos perdidos en el marketing digital a tener un sistema claro y predecible. Su metodología es efectiva.",
+    author: "David R.",
+    role: "Founder, RetailHub"
   }
 ];
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-32 bg-zinc-950 text-white relative overflow-hidden">
+    <section id="testimonials" className="py-32 bg-zinc-950 text-white relative overflow-hidden scroll-mt-24">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/5 blur-[120px]" />
       <div className="container px-6 mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-20">
@@ -36,7 +51,7 @@ export function Testimonials() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonios.map((t, i) => (
             <div
               key={i}
