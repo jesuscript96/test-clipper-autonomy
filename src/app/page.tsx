@@ -159,7 +159,41 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* FAQ Section */}
+      <section id="faq" className="relative relative-x-auto px-6 py-16 w-full max-w-3xl">
+        <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200 mb-12">Preguntas Frecuentes</h2>
+        <div className="max-w-2xl mx-auto">
+          <div className="space-y-6">
+            {[
+              {
+                question: "¿Cuánto tiempo tardan en entregar un proyecto?",
+                answer: "Depende de la complejidad, pero generalmente entregamos resultados en 2-4 semanas para proyectos de marketing y 4-6 semanas para desarrollos web más complejos. Nos ajustamos a tus deadlines."
+              },
+              {
+                question: "¿Trabajan con empresas de todos los tamaños?",
+                answer: "Sí, desde startups hasta empresas consolidadas. Nuestro enfoque se adapta a tu escala y presupuesto."
+              },
+              {
+                question: "¿Puedo ver ejemplos de proyectos anteriores?",
+                answer: "Por supuesto. Durante la llamada te mostraremos casos de éxito relevantes para tu industria. La confidencialidad es clave para nosotros."
+              },
+              {
+                question: "¿Qué resultados puedo esperar?",
+                answer: "Nuestro objetivo es un ROI mínimo de 3x. Medimos todo: tráfico, conversiones, ventas. Sin humo, solo números."
+              },
+              {
+                question: "¿Ofrecen soporte después de terminar el proyecto?",
+                answer: "Sí, incluimos 30 días de soporte post-entrega. Luego puedes contratar mantenimiento mensual si lo necesitas."
+              }
+            ].map((faq) => (
+              <div key={faq.question} className="border rounded-lg p-6 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">{faq.question}</h3>
+                <p className="text-zinc-600 dark:text-zinc-400">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="contact" className="relative relative-x-auto px-6 py-16 w-full max-w-3xl">
         <h2 className="text-3xl font-bold text-center text-zinc-800 dark:text-zinc-200 mb-8">
           ¡Hablemos!
