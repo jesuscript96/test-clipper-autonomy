@@ -16,10 +16,67 @@ export const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="#services" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
-            Servicios
-          </Link>
+        <nav className="hidden md:flex items-center gap-6">
+          {/* Verticales Dropdown */}
+          <div className="relative group">
+            <button className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-1">
+              Verticales
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 z-50">
+              <div className="grid grid-cols-2 gap-2">
+                {[
+                  { name: "Agencias", href: "/vertical/agencias" },
+                  { name: "E-commerce", href: "/vertical/ecommerce" },
+                  { name: "SaaS", href: "/vertical/saas" },
+                  { name: "Educación", href: "/vertical/educacion" },
+                  { name: "Finanzas", href: "/vertical/finanzas" },
+                  { name: "Healthcare", href: "/vertical/healthcare" },
+                  { name: "Tecnología", href: "/vertical/tecnologia" },
+                  { name: "Energía", href: "/vertical/energia" },
+                  { name: "Retail", href: "/vertical/retail" },
+                  { name: "Logística", href: "/vertical/logistica" },
+                  { name: "Manufactura", href: "/vertical/manufactura" },
+                  { name: "Hospitalidad", href: "/vertical/hospitalidad" }
+                ].map((vertical) => (
+                  <Link
+                    key={vertical.href}
+                    href={vertical.href}
+                    className="px-3 py-2 rounded-lg text-sm text-zinc-700 dark:text-zinc-300 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
+                  >
+                    {vertical.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Servicios Dropdown */}
+          <div className="relative group">
+            <button className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors flex items-center gap-1">
+              Servicios
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-72 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-200 dark:border-zinc-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 p-4 z-50">
+              <div className="space-y-2">
+                <Link href="/servicios/automatizacion" className="block p-3 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                  <div className="font-bold text-zinc-900 dark:text-zinc-100">Automatización</div>
+                  <div className="text-xs text-zinc-500 mt-1">Procesos automáticos 24/7</div>
+                </Link>
+                <Link href="/servicios/consultoria" className="block p-3 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                  <div className="font-bold text-zinc-900 dark:text-zinc-100">Consultoría Estratégica</div>
+                  <div className="text-xs text-zinc-500 mt-1">Transformación digital</div>
+                </Link>
+                <div className="pt-2 mt-2 border-t border-zinc-200 dark:border-zinc-700">
+                  <Link href="/recursos" className="block p-3 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors">
+                    <div className="font-bold text-zinc-900 dark:text-zinc-100">📚 Recursos Gratuitos</div>
+                    <div className="text-xs text-zinc-500 mt-1">Kits y guías descargables</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <Link href="/recursos" className="text-sm font-medium text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
             Recursos
           </Link>
